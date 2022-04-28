@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles.css">
+  <!-- for chromeDev device view -->
+  <!-- <meta name="viewport" content="width=device-width">  or may need code below: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+	  $('#what-we-offer-gallery a').click(function(){
+		  let galleryHref = $(this).attr('href');
+		  let galleryHeading = $(this).attr('title');
+      let galleryDesc = $(this).attr('alt');
+		  $('figure').css('display','none');
+		  $('figure img').attr({ src: galleryHref, alt: galleryHeading });
+		  $('#location-description h3').html(galleryHeading);
+      $('#location-description p').html(galleryDesc);
+		  $('figure').fadeToggle(1000);
+		 return false;
+	});
+});
+</script>
+</head>
+
+<body>
+
+  <!-- HEADER
+    -------------------------------------------->
+  <header>
+    <h1>G<span class="highlight">s</span></h1>
+    <nav>
+      <ul>
+        <li><a href="#who-are-we">Who are we&quest;</a></li>
+        <li><a href="#what-we-do">What do we do&quest;</a></li>
+        <li><a href="#what-we-offer-gallery">What can we offer&quest;</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- WHO ARE WE? section
+    ----------------------------------------------->
+  <div id="who-are-we">
+    <img src="./images/san-golden-gate-bridge-svg.png">
+    <div id="who-are-we-text">
+      <h1 class="logo"><span class="highlight">GOLD</span>EN SCENES</h1>
+      <h2>Let us find your perfect filming location in the Golden State.</h2>
+    </div>
+  </div>
+
+  <!-- WHAT WE DO section
+    ----------------------------------------------->
+  <div id="what-we-do">
+    <div class="container">
+      <h3>Location finding</h3>
+      <p>Take the hassle out of scouting your filming location by letting us do it for you. We have exclusive key scenic locations across the San Francisco area.</p>
+    </div>
+    <div class="container">
+      <h3>Hassle-free permissions</h3>
+      <p>We already have access and permissions set up and ready to go, all you have to do is pick out your locations and let us take care of the paperwork.</p>
+    </div>
+    <div class="container">
+      <h3>You don't have to be Steven Spielberg!</h3>
+      <p>Filming isn't just about the movies. We cater our services to all needs including small commercial shoots and private events.</p>
+    </div>
+  </div>
+
+  <!-- WHAT WE LOOK LIKE section
+    ----------------------------------------------->
+  <div id="what-we-offer-gallery">
+    <ul>
+      <li>
+        <a href="./images/photo1.jpg"  title="Golden Gate Bridge" alt="One of America's most iconic backdrops, instantly recognisable across the globe."><img src="./images/photo1thumb.jpg" width="100" height="75"  alt="Golden Gate Bridge"></a>
+      </li>
+      <li>
+        <a href="./images/photo2.jpg" title="Rocky Coastline" alt="Imagine a romantic scene set on a secluded beach."><img src="./images/photo2thumb.jpg" width="100" height="75" alt="Rocky Coastline"></a>  
+      </li>
+      <li>
+        <a href="./images/photo3.jpg" title="Waves Crashing on the Coast" alt="Create a moody, brooding atmosphere with the dramatic backdrop of crashing waves."><img src="./images/photo3thumb.jpg" width="100" height="75" alt="Waves Crashing on the Coast"></a>
+      </li>
+      <li>
+        <a href="./images/photo4.jpg" title="Waterfall Near Big Sur" alt="Make use of the stunning waterfall and sunsets at Big Sur to set as a backdrop to a dramatic or romantic scene."><img src="./images/photo4thumb.jpg" width="100" height="75" alt="Waterfall Near Big Sur"></a>
+      </li>
+      <li>
+        <a href="./images/photo5.jpg" title="Clouds on the Coast" alt="We have more than 50 coastal locations ready to use, and can predict the weather on a given day to within 85% accuracy, allowing you to plan well in advance."><img src="./images/photo5thumb.jpg" width="100" height="75" alt="Clouds on the Coast"></a>
+     </li>
+     <li>
+       <a href="./images/photo6.jpg" title="Sunset on the Coast" alt="Perfect for capturing those scenic backdrops to a car ride."><img src="./images/photo6thumb.jpg" width="100" height="75" alt="Sunset on the Coast"></a>
+     </li>
+    </ul>
+
+    <figure>
+     <img src="./images/photo1.jpg" width="400" height="300" alt="Golden Gate Bridge">
+     <!--<figcaption>Golden Gate Bridge</figcaption>-->
+    </figure>
+
+    <div id="location-description">
+      <h3>Golden Gate Bridge</h3>
+      <p>One of America's most iconic backdrops, instantly recognisable across the globe.</p>
+    </div>
+  </div>
+
+
+  <!-- FOOTER
+    ----------------------------------------------->
+  <footer>
+    <p>&copy; GOLDEN SCENES</p>
+  </footer>
+
+  
+</body>
+
+</html>
